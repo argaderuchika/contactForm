@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init(""); //key
+   })();
+</script>
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="form">
+        <div class="contact-info">
+          <h2>Call Us 24/7</h2>
+
+          <div class="social-media">
+            
+            
+          </div>
+        </div>
+
+        <div class="contact-form">
+           <form id="form" action="index.html">
+            <p>Get in touch with us</p>
+            <div class="input-container">
+                <input id="username" name="username" type="text" class="input" placeholder="Fullname">
+                <div class="error"></div>
+            </div>
+            <div class="input-container">
+                <input id="email" name="email" type="text" class="input" placeholder="email">
+                <div class="error"></div>
+            </div>
+            <div class="input-container">
+                <input id="phone"name="phone" type="tel" class="input" placeholder="phone">
+                <div class="error"></div>
+            </div>
+            <div class="input-container">
+                <input id="date"name="date" type="date"class="input" placeholder="date">
+                <div class="error"></div>
+            </div>
+            <div class="input-container">
+              <select  id="subject" class="input" placeholder="subject of discussion">
+                <option value="">Select subject of discussion</option>
+                <option value="web">Web development services</option>
+                <option value="mobile">Mobile Application development</option>
+                <option value="itservices">Managed IT services</option>
+                <option value="cloud">Cloud Application services</option>
+              </select>
+              <div class="error"></div>
+
+            </div>
+              <div class="input-container">
+                  <input id="company" type="text" name="company" class="input" placeholder="company"/>
+                  <div class="error"></div>
+
+                </div>
+              <div class="input-container textarea">
+                <textarea id="message" name="message" class="input" placeholder="message (optional)"></textarea>
+                <div class="error"></div>
+
+              </div>
+              <div>
+                  <small class="text-input" >12+38? Please enter evaluation below</small>
+  
+              </div>
+              <div class="input-container">
+                  <input id="evaluation" type="text" name="evaluation" class="input" placeholder="Enter evaluation"/>
+                  <div class="error"></div>
+
+                </div>
+            <button type="submit" class="btn" onClick="sendMail()">Send</button>
+        </form> 
+
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+  </body>
+</html>
